@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wallet - Enviar Dinero</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Enviar Dinero</h2>
+
+    <form onsubmit="event.preventDefault();">
+      <!-- Buscador -->
+      <div class="form-group">
+        <label for="searchContact">Buscar en la agenda de transferencias:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="searchContact"
+          placeholder="Contacto"
+          onkeyup="buscarContacto()"
+        >
+      </div>
+
+      <button type="button" class="btn btn-primary mb-3"
+        onclick="alert('Función simple: acá podrías agregar un contacto más adelante')">
+        Agregar nuevo contacto
+      </button>
+
+      <!-- Lista de contactos -->
+      <h3>Contactos</h3>
+      <ul id="contactList" class="list-group">
+        <li class="list-group-item">
+          <input type="radio" name="contacto" value="Camila" class="mr-2">
+          <div class="contact-info d-inline-block">
+            <span class="contact-name">Camila</span><br>
+            <span class="contact-details">
+              Numero de Cuenta: 1234<br>
+              Alias: cami<br>
+              Banco: Banco de Chile
+            </span>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          <input type="radio" name="contacto" value="Alyson" class="mr-2">
+          <div class="contact-info d-inline-block">
+            <span class="contact-name">Alyson</span><br>
+            <span class="contact-details">
+              Numero de Cuenta: 5678<br>
+              Alias: Aly<br>
+              Banco: Banco de Chile
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Monto -->
+      <div class="form-group mt-3">
+        <label for="sendAmount">Monto a enviar:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="sendAmount"
+          placeholder="Introducir Monto"
+        >
+      </div>
+
+      <button type="button" class="btn btn-success" onclick="enviarDineroSimple()">
+        Enviar dinero
+      </button>
+    </form>
+
+    <a href="menu.html" class="btn btn-secondary mt-3">
+      Volver al Menú Principal
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wallet - Depositar</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Depositar</h2>
+
+    <form onsubmit="event.preventDefault(); depositarSimple();">
+      <div class="form-group">
+        <label for="depositAmount">Monto a depositar:</label>
+        <input type="number" class="form-control" id="depositAmount" placeholder="Introduce Monto" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Realizar depósito</button>
+    </form>
+
+    <a href="menu.html" class="btn btn-secondary">Volver al Menú Principal</a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
